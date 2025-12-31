@@ -84,12 +84,17 @@
 
     /* NEW: image logo */
     .brand-logo{
-      height: 52px;
-      width: auto;
-      display: block;
-      /* Optional: slightly improve rendering on dark backgrounds */
-      filter: drop-shadow(0 10px 22px rgba(0,0,0,.35));
-    }
+  height: 76px;          /* bigger on desktop */
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.35));
+}
+
+@media (max-width: 768px){
+  .brand-logo{
+    height: 58px;        /* still strong on mobile */
+  }
+}
 
     .brand small{
       display:block; font-weight: 600; color: var(--faint);
@@ -384,7 +389,9 @@
         <a class="brand" href="#top" aria-label="Legacy Sport Solutions Home">
           <img src="legacy-logo-gold.png" alt="Legacy Sport Solutions" class="brand-logo">
           <div>
-            <small>Investment & Equity Acquisitions</small>
+            <strong style="font-size:16px; letter-spacing:0.08em;">
+  LEGACY SPORT SOLUTIONS
+</strong>
           </div>
         </a>
 
@@ -745,4 +752,5 @@ ${decodeURIComponent(message)}`;
     });
   </script>
 </body>
+</html>
 </html>
