@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Legacy Sport Solutions | Investment & Equity Acquisitions</title>
+  <meta name="description" content="Legacy Sport Solutions focuses on investment and equity acquisitions in sports and adjacent sectors—structured capital, strategic minority/majority stakes, and value creation." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Legacy Sport Solutions | Investment & Equity Acquisitions" />
+  <meta property="og:description" content="Structured investments and equity acquisitions with disciplined analysis and long-term value creation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://legacysportsolutions.com/" />
+
+  <!-- Favicon (optional): put favicon.ico in root -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --bg: #070b14;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --faint: rgba(255,255,255,.55);
+      --stroke: rgba(255,255,255,.14);
+      --stroke2: rgba(255,255,255,.10);
+      --accent: #76b7ff;
+      --accent2: #9cffd5;
+      --danger: #ff6b6b;
+      --shadow: 0 18px 50px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 24px;
+      --max: 1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 15% 10%, rgba(118,183,255,.18), transparent 60%),
+                  radial-gradient(900px 500px at 90% 20%, rgba(156,255,213,.12), transparent 55%),
+                  radial-gradient(1000px 700px at 70% 95%, rgba(118,183,255,.10), transparent 55%),
+                  var(--bg);
+      overflow-x: hidden;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .chip{
+      display: inline-flex; gap: 10px; align-items: center;
+      padding: 10px 14px; border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.05);
+      border-radius: 999px; color: var(--muted); font-size: 14px;
+      backdrop-filter: blur(10px);
+    }
+    .dot{
+      width: 10px; height: 10px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 6px rgba(118,183,255,.10);
+    }
+
+    /* Header */
+    header{
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(7,11,20,.55);
+      border-bottom: 1px solid var(--stroke2);
+    }
+    .nav{
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0;
+      gap: 18px;
+    }
+    .brand{
+      display: flex; align-items: center; gap: 12px;
+      font-weight: 700; letter-spacing: .2px;
+    }
+
+    /* NEW: image logo */
+    .brand-logo{
+      height: 52px;
+      width: auto;
+      display: block;
+      /* Optional: slightly improve rendering on dark backgrounds */
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,.35));
+    }
+
+    .brand small{
+      display:block; font-weight: 600; color: var(--faint);
+      letter-spacing: .4px; margin-top: 2px; font-size: 11px;
+      text-transform: uppercase;
+    }
+    nav ul{
+      list-style: none; margin: 0; padding: 0;
+      display: flex; gap: 18px; align-items: center;
+    }
+    nav a{
+      color: var(--muted);
+      font-size: 14px;
+      padding: 10px 10px;
+      border-radius: 12px;
+      transition: background .2s ease, color .2s ease;
+    }
+    nav a:hover{ background: rgba(255,255,255,.06); color: var(--text); }
+
+    .btn{
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-weight: 650;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform .08s ease, background .2s ease, border-color .2s ease;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .btn:hover{ background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); }
+    .btn:active{ transform: translateY(1px); }
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, rgba(118,183,255,.95), rgba(156,255,213,.85));
+      color: rgba(7,11,20,.95);
+    }
+    .btn.primary:hover{ filter: brightness(1.05); }
+    .btn .icon{ width: 18px; height: 18px; display: inline-block; }
+
+    .menuBtn{ display:none; }
+    .mobileMenu{
+      display:none;
+      padding: 12px 0 18px;
+      border-top: 1px solid var(--stroke2);
+    }
+    .mobileMenu a{ display:block; padding: 12px 10px; border-radius: 12px; }
+    .mobileMenu a:hover{ background: rgba(255,255,255,.06); }
+
+    /* Hero */
+    .hero{
+      padding: 68px 0 36px;
+      position: relative;
+    }
+    .heroGrid{
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+    .h1{
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.03;
+      letter-spacing: -0.8px;
+      margin: 16px 0 14px;
+    }
+    .lead{
+      color: var(--muted);
+      font-size: 16.5px;
+      line-height: 1.6;
+      max-width: 62ch;
+      margin: 0 0 22px;
+    }
+    .ctaRow{ display:flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .metaRow{
+      display:flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;
+      color: var(--faint); font-size: 13px;
+    }
+    .panel{
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .panelInner{ padding: 18px; }
+    .statGrid{
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .stat{
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.05);
+    }
+    .stat b{ display:block; font-size: 14px; margin-bottom: 6px; }
+    .stat span{ color: var(--muted); font-size: 13px; line-height: 1.45; display:block; }
+
+    .miniTitle{
+      color: var(--faint);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin: 0 0 10px;
+    }
+
+    /* Sections */
+    section{ padding: 48px 0; }
+    .sectionHead{
+      display:flex; justify-content: space-between; align-items: flex-end;
+      gap: 20px; margin-bottom: 18px;
+    }
+    .sectionHead h2{
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: -0.3px;
+    }
+    .sectionHead p{
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.35);
+    }
+    .card h3{ margin: 10px 0 8px; font-size: 16px; letter-spacing: -0.2px; }
+    .card p{ margin: 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 8px 10px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    .pill .badge{
+      width: 26px; height: 26px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(118,183,255,.35), rgba(156,255,213,.22));
+      border: 1px solid rgba(255,255,255,.12);
+      display:flex; align-items:center; justify-content:center;
+      font-weight: 750;
+      color: rgba(255,255,255,.92);
+    }
+
+    /* Thesis + Criteria */
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    .list{
+      margin: 0; padding: 0; list-style: none;
+      display:grid; gap: 10px;
+    }
+    .li{
+      display:flex; gap: 12px; align-items:flex-start;
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+    }
+    .check{
+      width: 22px; height: 22px; border-radius: 8px;
+      background: linear-gradient(135deg, rgba(118,183,255,.85), rgba(156,255,213,.75));
+      display:flex; align-items:center; justify-content:center;
+      color: rgba(7,11,20,.95);
+      font-weight: 900;
+      margin-top: 1px;
+      flex: 0 0 auto;
+    }
+    .li b{ display:block; margin-bottom: 4px; }
+    .li span{ display:block; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+
+    /* Process timeline */
+    .steps{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .step{
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.05);
+    }
+    .num{
+      display:inline-flex; align-items:center; justify-content:center;
+      width: 34px; height: 34px;
+      border-radius: 14px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.05);
+      font-weight: 800;
+      color: rgba(255,255,255,.92);
+    }
+    .step h4{ margin: 12px 0 8px; font-size: 15px; }
+    .step p{ margin: 0; color: var(--muted); line-height: 1.6; font-size: 13.5px; }
+
+    /* Contact */
+    .contact{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    form{ display:grid; gap: 10px; }
+    input, textarea, select{
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      outline: none;
+      font: inherit;
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+    input::placeholder, textarea::placeholder{ color: rgba(255,255,255,.45); }
+    .formRow{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .fineprint{ color: var(--faint); font-size: 12.5px; line-height: 1.5; margin-top: 8px; }
+
+    footer{
+      border-top: 1px solid var(--stroke2);
+      padding: 26px 0;
+      color: var(--faint);
+      font-size: 13px;
+    }
+    .footRow{ display:flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+    /* Utilities */
+    .muted{ color: var(--muted); }
+    .spacer{ height: 8px; }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .cards{ grid-template-columns: 1fr; }
+      .twoCol{ grid-template-columns: 1fr; }
+      .steps{ grid-template-columns: 1fr; }
+      .contact{ grid-template-columns: 1fr; }
+      nav ul{ display:none; }
+      .menuBtn{ display:inline-flex; }
+      .mobileMenu{ display:none; }
+      .mobileMenu.open{ display:block; }
+      .formRow{ grid-template-columns: 1fr; }
+      .brand-logo{ height: 44px; }
+    }
+
+    /* Smooth anchors */
+    html { scroll-behavior: smooth; }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Legacy Sport Solutions",
+    "url":"https://legacysportsolutions.com/",
+    "description":"Investment and equity acquisitions focused platform for sports and adjacent sectors.",
+    "sameAs":[]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ONE clean sticky header -->
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Legacy Sport Solutions Home">
+          <img src="legacy-logo-gold.png" alt="Legacy Sport Solutions" class="brand-logo">
+          <div>
+            <small>Investment & Equity Acquisitions</small>
+          </div>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#thesis">Thesis</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div style="display:flex; gap:10px; align-items:center;">
+          <button class="btn menuBtn" id="menuBtn" type="button" aria-label="Open menu">
+            <span class="icon">☰</span> Menu
+          </button>
+          <a class="btn primary" href="#contact" aria-label="Discuss an opportunity">
+            <span class="icon">↗</span> Discuss an Opportunity
+          </a>
+        </div>
+      </div>
+
+      <div class="mobileMenu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="#focus">Focus</a>
+        <a href="#thesis">Thesis</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div>
+            <span class="chip"><span class="dot"></span> Private investments • Equity acquisitions • Value creation</span>
+            <h1 class="h1">Structured capital and equity acquisitions for long-term growth.</h1>
+            <p class="lead">
+              Legacy Sport Solutions identifies, evaluates, and executes <b>equity investments</b> and <b>strategic acquisitions</b>
+              with a disciplined approach to risk, governance, and sustainable value creation.
+            </p>
+
+            <div class="ctaRow">
+              <a class="btn primary" href="#contact"><span class="icon">✦</span> Submit a Deal / Mandate</a>
+              <a class="btn" href="#focus"><span class="icon">↓</span> Our Focus</a>
+            </div>
+
+            <div class="metaRow">
+              <span>✔ Minority & majority equity</span>
+              <span>✔ Co-investment structures</span>
+              <span>✔ Sport & adjacent sectors</span>
+            </div>
+          </div>
+
+          <aside class="panel" aria-label="Overview panel">
+            <div class="panelInner">
+              <div class="miniTitle">What we do</div>
+              <div class="statGrid">
+                <div class="stat">
+                  <b>Equity Acquisitions</b>
+                  <span>Strategic stakes in high-potential businesses with clear governance pathways.</span>
+                </div>
+                <div class="stat">
+                  <b>Direct Investments</b>
+                  <span>Growth capital and structured financing aligned with operational milestones.</span>
+                </div>
+                <div class="stat">
+                  <b>Co-Investment</b>
+                  <span>Partnering with investors and strategic operators to share risk and upside.</span>
+                </div>
+                <div class="stat">
+                  <b>Value Creation</b>
+                  <span>Active support on strategy, reporting, and performance improvement.</span>
+                </div>
+              </div>
+
+              <div class="spacer"></div>
+              <div class="pill" title="Investment discipline">
+                <span class="badge">Δ</span>
+                <span>Disciplined underwriting • Clear downside controls</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOCUS -->
+    <section id="focus">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Investment Focus</h2>
+            <p>We concentrate exclusively on investments and equity acquisitions—no agency services, no representation activities.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="pill"><span class="badge">1</span><span>Equity acquisitions</span></div>
+            <h3>Minority & majority stakes</h3>
+            <p>
+              Targeted acquisitions in businesses where capital, governance, and operational execution can create measurable value.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="pill"><span class="badge">2</span><span>Strategic investments</span></div>
+            <h3>Growth capital & structured deals</h3>
+            <p>
+              Capital aligned to milestones—expansion, productization, market entry, or performance improvement.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="pill"><span class="badge">3</span><span>Co-investments</span></div>
+            <h3>Partner-led opportunities</h3>
+            <p>
+              Collaborative investments with operators, institutional investors, and family offices to amplify impact and returns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THESIS -->
+    <section id="thesis">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Thesis & Selection Criteria</h2>
+            <p>We select opportunities with strong fundamentals, scalable economics, and a clear path to governance and reporting excellence.</p>
+          </div>
+        </div>
+
+        <div class="twoCol">
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Our thesis</div>
+              <ul class="list">
+                <li class="li">
+                  <div class="check">✓</div>
+                  <div><b>Defensible edge</b><span>Clear differentiation, brand strength, proprietary access, or structural advantage.</span></div>
+                </li>
+                <li class="li">
+                  <div class="check">✓</div>
+                  <div><b>Unit economics that scale</b><span>Repeatable revenue drivers with margin expansion potential.</span></div>
+                </li>
+                <li class="li">
+                  <div class="check">✓</div>
+                  <div><b>Execution-ready leadership</b><span>Aligned incentives, performance culture, and transparent decision-making.</span></div>
+                </li>
+                <li class="li">
+                  <div class="check">✓</div>
+                  <div><b>Governance & reporting</b><span>Investor-grade reporting, KPI frameworks, and robust controls.</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Typical targets</div>
+              <ul class="list">
+                <li class="li">
+                  <div class="check">✓</div>
+                  <div><b>Sports ecosystem</b><span>Media, data, performance, venues, experiences, consumer products.</span></div>
+                </li>
+                <li class="li">
+                  <div class="check">✓</div>
+                  <div><b>Adjacent sectors</b><span>Digital platforms, health & wellness, entertainment, B2B services.</span></div>
+                </li>
+                <li class="li">
+                  <div class="check">✓</div>
+                  <div><b>Geography</b><span>Global perspective with local execution partnerships.</span></div>
+                </li>
+                <li class="li">
+                  <div class="check">✓</div>
+                  <div><b>Deal structures</b><span>Primary, secondary, carve-outs, SPVs, co-investment vehicles.</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>How We Work</h2>
+            <p>A clear, investor-grade process from first review to execution and value creation.</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="num">01</div>
+            <h4>Screening</h4>
+            <p>Initial review of fit, business model, unit economics, governance readiness, and deal rationale.</p>
+          </div>
+          <div class="step">
+            <div class="num">02</div>
+            <h4>Underwriting</h4>
+            <p>Market analysis, financial model, downside cases, and risk mapping with mitigation plan.</p>
+          </div>
+          <div class="step">
+            <div class="num">03</div>
+            <h4>Structuring</h4>
+            <p>Term sheet alignment, shareholder protections, reporting requirements, and incentives.</p>
+          </div>
+          <div class="step">
+            <div class="num">04</div>
+            <h4>Execution</h4>
+            <p>Closing, onboarding, KPI cadence, and post-investment value creation support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Contact</h2>
+            <p>Share an opportunity or mandate. We respond quickly if it fits our investment scope.</p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Send details</div>
+
+              <!-- This form uses mailto (simple). Replace with your backend later if needed. -->
+              <form id="dealForm">
+                <div class="formRow">
+                  <input name="name" placeholder="Your name" autocomplete="name" required />
+                  <input name="email" type="email" placeholder="Email" autocomplete="email" required />
+                </div>
+
+                <div class="formRow">
+                  <select name="type" required>
+                    <option value="" disabled selected>Opportunity type</option>
+                    <option>Equity acquisition (majority)</option>
+                    <option>Equity acquisition (minority)</option>
+                    <option>Growth investment</option>
+                    <option>Co-investment</option>
+                    <option>Mandate / Advisory (investment only)</option>
+                  </select>
+                  <input name="sector" placeholder="Sector (e.g., sports data, media, wellness)" />
+                </div>
+
+                <textarea name="message" placeholder="Company / asset summary, traction, financial highlights, and what you are seeking." required></textarea>
+
+                <button class="btn primary" type="submit">
+                  <span class="icon">✉</span> Send
+                </button>
+
+                <div class="fineprint">
+                  By submitting, you confirm you are authorized to share the information. We treat communications confidentially.
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Direct</div>
+              <p class="muted" style="margin:0 0 12px; line-height:1.7;">
+                Prefer email? Use the contact below and attach a short teaser (PDF) or executive summary.
+              </p>
+
+              <div class="card" style="background: rgba(255,255,255,.04); border-color: var(--stroke2); box-shadow:none;">
+                <h3 style="margin-top:0;">Legacy Sport Solutions</h3>
+                <p style="margin:0 0 10px;">
+                  <b>Email:</b> <span class="muted">info@legacysportsolutions.com</span><br/>
+                  <b>Scope:</b> <span class="muted">Investment & Equity Acquisitions</span><br/>
+                  <b>Notes:</b> <span class="muted">No player/coach representation</span>
+                </p>
+                <a class="btn" href="mailto:info@legacysportsolutions.com?subject=Legacy%20Sport%20Solutions%20-%20Investment%20Opportunity">
+                  <span class="icon">↗</span> Email us
+                </a>
+              </div>
+
+              <div class="spacer"></div>
+              <p class="fineprint" style="margin:0;">
+                Tip: Add a “Data Room link” and “Last 12 months P&L / KPIs” to speed up review.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footRow">
+        <div>© <span id="year"></span> Legacy Sport Solutions. All rights reserved.</div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="muted" href="#top">Top</a>
+          <span class="muted">•</span>
+          <a class="muted" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (menuBtn){
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
+    }
+    // Close mobile menu on click
+    mobileMenu?.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => mobileMenu.classList.remove("open"));
+    });
+
+    // Mailto form handler (simple + works everywhere)
+    const form = document.getElementById("dealForm");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      const data = new FormData(form);
+
+      const name = encodeURIComponent(data.get("name") || "");
+      const email = encodeURIComponent(data.get("email") || "");
+      const type = encodeURIComponent(data.get("type") || "");
+      const sector = encodeURIComponent(data.get("sector") || "");
+      const message = encodeURIComponent(data.get("message") || "");
+
+      const subject = `Legacy Sport Solutions - ${decodeURIComponent(type)} - ${decodeURIComponent(sector)}`.trim();
+      const body =
+`Name: ${decodeURIComponent(name)}
+Email: ${decodeURIComponent(email)}
+Type: ${decodeURIComponent(type)}
+Sector: ${decodeURIComponent(sector)}
+
+Message:
+${decodeURIComponent(message)}`;
+
+      const to = "info@legacysportsolutions.com";
+      const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
