@@ -513,9 +513,32 @@ section {
       a.addEventListener("click", () => mobileMenu.classList.remove("open"));
     });
   </script>
+  <script>
+  // --- Force in-page anchor scrolling (bulletproof) ---
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href").slice(1);
+      if (!id) return;
+
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      e.preventDefault();
+      // close mobile menu if open
+      document.getElementById("mobileMenu")?.classList.remove("open");
+
+      // update URL hash (so it looks professional)
+      history.pushState(null, "", `#${id}`);
+
+      // scroll
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
