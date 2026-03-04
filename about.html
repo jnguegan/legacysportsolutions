@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <!-- ✅ IMPORTANT: this is the SAME CSS as your index.html -->
+  <!-- SAME CSS AS INDEX -->
   <style>
     :root{
       --bg: #070b14;
@@ -85,9 +85,8 @@
       font-weight: 700; letter-spacing: .2px;
     }
 
-    /* NEW: image logo */
     .brand-logo{
-      height: 150px;   /* stronger presence */
+      height: 150px;
       width: auto;
       display: block;
       filter: drop-shadow(0 10px 22px rgba(0,0,0,.35));
@@ -148,65 +147,6 @@
     .mobileMenu a{ display:block; padding: 12px 10px; border-radius: 12px; }
     .mobileMenu a:hover{ background: rgba(255,255,255,.06); }
 
-    /* Hero */
-    .hero{
-      padding: 68px 0 36px;
-      position: relative;
-    }
-    .heroGrid{
-      display: grid;
-      grid-template-columns: 1.12fr .88fr;
-      gap: 26px;
-      align-items: stretch;
-    }
-    .h1{
-      font-size: clamp(34px, 4vw, 54px);
-      line-height: 1.03;
-      letter-spacing: -0.8px;
-      margin: 16px 0 14px;
-    }
-    .lead{
-      color: var(--muted);
-      font-size: 16.5px;
-      line-height: 1.6;
-      max-width: 62ch;
-      margin: 0 0 22px;
-    }
-    .ctaRow{ display:flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-    .metaRow{
-      display:flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;
-      color: var(--faint); font-size: 13px;
-    }
-    .panel{
-      border: 1px solid var(--stroke2);
-      background: rgba(255,255,255,.05);
-      border-radius: var(--radius2);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .panelInner{ padding: 18px; }
-    .statGrid{
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    .stat{
-      padding: 14px;
-      border-radius: 16px;
-      border: 1px solid var(--stroke2);
-      background: rgba(255,255,255,.05);
-    }
-    .stat b{ display:block; font-size: 14px; margin-bottom: 6px; }
-    .stat span{ color: var(--muted); font-size: 13px; line-height: 1.45; display:block; }
-
-    .miniTitle{
-      color: var(--faint);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin: 0 0 10px;
-    }
-
-    /* Sections */
     section{ padding: 48px 0; }
     .sectionHead{
       display:flex; justify-content: space-between; align-items: flex-end;
@@ -225,47 +165,30 @@
       font-size: 15px;
     }
 
-    .cards{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-    .card{
+    .panel{
       border: 1px solid var(--stroke2);
       background: rgba(255,255,255,.05);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: 0 12px 28px rgba(0,0,0,.35);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
-    .card h3{ margin: 10px 0 8px; font-size: 16px; letter-spacing: -0.2px; }
-    .card p{ margin: 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
+    .panelInner{ padding: 18px; }
 
-    .pill{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 8px 10px;
-      border: 1px solid var(--stroke2);
-      background: rgba(255,255,255,.04);
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 12.5px;
-    }
-    .pill .badge{
-      width: 26px; height: 26px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(118,183,255,.35), rgba(156,255,213,.22));
-      border: 1px solid rgba(255,255,255,.12);
-      display:flex; align-items:center; justify-content:center;
-      font-weight: 750;
-      color: rgba(255,255,255,.92);
-    }
-
-    /* Thesis + Criteria */
     .twoCol{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       align-items: stretch;
     }
+
+    .miniTitle{
+      color: var(--faint);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin: 0 0 10px;
+    }
+
     .list{
       margin: 0; padding: 0; list-style: none;
       display:grid; gap: 10px;
@@ -289,7 +212,6 @@
     .li b{ display:block; margin-bottom: 4px; }
     .li span{ display:block; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
 
-    /* Process timeline */
     .steps{
       display:grid;
       grid-template-columns: repeat(4, 1fr);
@@ -313,7 +235,6 @@
     .step h4{ margin: 12px 0 8px; font-size: 15px; }
     .step p{ margin: 0; color: var(--muted); line-height: 1.6; font-size: 13.5px; }
 
-    /* Contact */
     .contact{
       display:grid;
       grid-template-columns: 1.05fr .95fr;
@@ -344,14 +265,10 @@
     }
     .footRow{ display:flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; }
 
-    /* Utilities */
     .muted{ color: var(--muted); }
     .spacer{ height: 8px; }
 
-    /* Responsive */
     @media (max-width: 980px){
-      .heroGrid{ grid-template-columns: 1fr; }
-      .cards{ grid-template-columns: 1fr; }
       .twoCol{ grid-template-columns: 1fr; }
       .steps{ grid-template-columns: 1fr; }
       .contact{ grid-template-columns: 1fr; }
@@ -363,11 +280,9 @@
       .brand-logo{ height: 44px; }
     }
 
-    /* Smooth anchors */
     html { scroll-behavior: smooth; }
   </style>
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -382,7 +297,6 @@
 
 <body>
 
-  <!-- Same header as index (but nav links go back to index sections) -->
   <header>
     <div class="wrap">
       <div class="nav">
@@ -394,13 +308,14 @@
           </div>
         </a>
 
+        <!-- ✅ ABOUT PAGE NAV LINKS NOW POINT TO REAL SECTIONS -->
         <nav aria-label="Primary navigation">
           <ul>
-            <li><a href="/about.html" aria-current="page">About</a></li>
-            <li><a href="/index.html#focus">Focus</a></li>
-            <li><a href="/index.html#thesis">Thesis</a></li>
-            <li><a href="/index.html#process">Process</a></li>
-            <li><a href="/index.html#contact">Contact</a></li>
+            <li><a href="#top" aria-current="page">About</a></li>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#thesis">Thesis</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -408,25 +323,27 @@
           <button class="btn menuBtn" id="menuBtn" type="button" aria-label="Open menu">
             <span class="icon">☰</span> Menu
           </button>
-          <a class="btn primary" href="/index.html#contact" aria-label="Discuss an opportunity">
+          <a class="btn primary" href="#contact" aria-label="Discuss an opportunity">
             <span class="icon">↗</span> Discuss an Opportunity
           </a>
         </div>
       </div>
 
       <div class="mobileMenu" id="mobileMenu" aria-label="Mobile navigation">
-        <a href="/about.html" aria-current="page">About</a>
-        <a href="/index.html#focus">Focus</a>
-        <a href="/index.html#thesis">Thesis</a>
-        <a href="/index.html#process">Process</a>
-        <a href="/index.html#contact">Contact</a>
+        <a href="#top">About</a>
+        <a href="#focus">Focus</a>
+        <a href="#thesis">Thesis</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <div class="spacer"></div>
+        <a href="/index.html#top">← Back to Home</a>
       </div>
     </div>
   </header>
 
   <main id="top">
 
-    <!-- About content using your existing design system -->
+    <!-- ABOUT -->
     <section>
       <div class="wrap">
         <div class="sectionHead">
@@ -447,24 +364,15 @@
               <ul class="list">
                 <li class="li">
                   <div class="check">✓</div>
-                  <div>
-                    <b>Investment-only mandate</b>
-                    <span>We focus exclusively on equity acquisitions, structured investments, and co-investments — no representation services.</span>
-                  </div>
+                  <div><b>Investment-only mandate</b><span>We focus exclusively on equity acquisitions, structured investments, and co-investments — no representation services.</span></div>
                 </li>
                 <li class="li">
                   <div class="check">✓</div>
-                  <div>
-                    <b>Disciplined underwriting</b>
-                    <span>Clear downside controls, governance standards, and investor-grade reporting expectations.</span>
-                  </div>
+                  <div><b>Disciplined underwriting</b><span>Clear downside controls, governance standards, and investor-grade reporting expectations.</span></div>
                 </li>
                 <li class="li">
                   <div class="check">✓</div>
-                  <div>
-                    <b>Long-term value creation</b>
-                    <span>Active support on strategy, KPI cadence, and performance improvement frameworks.</span>
-                  </div>
+                  <div><b>Long-term value creation</b><span>Active support on strategy, KPI cadence, and performance improvement frameworks.</span></div>
                 </li>
               </ul>
             </div>
@@ -476,24 +384,15 @@
               <ul class="list">
                 <li class="li">
                   <div class="check">✓</div>
-                  <div>
-                    <b>Defined initiatives</b>
-                    <span>Specific opportunities (e.g., club investments, sports platforms, infrastructure) can be organized under dedicated cells.</span>
-                  </div>
+                  <div><b>Defined initiatives</b><span>Specific opportunities can be organized under dedicated cells (subject to applicable law and documentation).</span></div>
                 </li>
                 <li class="li">
                   <div class="check">✓</div>
-                  <div>
-                    <b>Clarity for partners</b>
-                    <span>Participation can be aligned to a specific mandate with transparent documentation and reporting.</span>
-                  </div>
+                  <div><b>Clarity for partners</b><span>Participation can be aligned to a specific mandate with transparent documentation and reporting.</span></div>
                 </li>
                 <li class="li">
                   <div class="check">✓</div>
-                  <div>
-                    <b>Risk management principles</b>
-                    <span>Ring-fencing principles support separation between initiatives where implemented and documented under applicable law.</span>
-                  </div>
+                  <div><b>Risk management principles</b><span>Ring-fencing principles support separation between initiatives where implemented and documented.</span></div>
                 </li>
               </ul>
 
@@ -503,24 +402,196 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="spacer"></div>
+    <!-- FOCUS (What We Do) -->
+    <section id="focus">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>What We Do</h2>
+            <p>Focus links here. We pursue investments where capital, governance, and operational execution can create measurable value.</p>
+          </div>
+        </div>
 
-        <div class="panel" style="margin-top:14px;">
-          <div class="panelInner">
-            <div class="miniTitle">Important note</div>
-            <p class="muted" style="margin:0; line-height:1.7;">
-              This website is provided for informational purposes only and does not constitute an offer, solicitation, or
-              recommendation. Certain initiatives may be conducted through individual protected cells of Legacy Sport Solutions PCC Limited.
-            </p>
+        <div class="twoCol">
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Core activities</div>
+              <ul class="list">
+                <li class="li"><div class="check">✓</div><div><b>Equity acquisitions</b><span>Minority and majority stakes in select opportunities.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Structured investments</b><span>Growth capital aligned with milestones and downside controls.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Co-investment</b><span>Partner-led deals with aligned investors and operators.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Value creation support</b><span>Strategy, reporting cadence, and performance improvement frameworks.</span></div></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Typical targets</div>
+              <ul class="list">
+                <li class="li"><div class="check">✓</div><div><b>Sports ecosystem</b><span>Media, data, performance, venues, experiences, consumer products.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Adjacent sectors</b><span>Digital platforms, health & wellness, entertainment, B2B services.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Deal structures</b><span>Primary, secondary, carve-outs, SPVs, co-investment vehicles.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Reporting standards</b><span>KPI frameworks, investor updates, governance and controls.</span></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THESIS -->
+    <section id="thesis">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Thesis & Selection Criteria</h2>
+            <p>Thesis links here. We select opportunities with strong fundamentals, scalable economics, and governance readiness.</p>
+          </div>
+        </div>
+
+        <div class="twoCol">
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Our thesis</div>
+              <ul class="list">
+                <li class="li"><div class="check">✓</div><div><b>Defensible edge</b><span>Clear differentiation, brand strength, proprietary access, or structural advantage.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Unit economics that scale</b><span>Repeatable revenue drivers with margin expansion potential.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Execution-ready leadership</b><span>Aligned incentives, performance culture, and transparent decision-making.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Governance & reporting</b><span>Investor-grade reporting, KPI frameworks, and robust controls.</span></div></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Typical targets</div>
+              <ul class="list">
+                <li class="li"><div class="check">✓</div><div><b>Sports ecosystem</b><span>Media, data, performance, venues, experiences, consumer products.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Adjacent sectors</b><span>Digital platforms, health & wellness, entertainment, B2B services.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Geography</b><span>Global perspective with local execution partnerships.</span></div></li>
+                <li class="li"><div class="check">✓</div><div><b>Deal structures</b><span>Primary, secondary, carve-outs, SPVs, co-investment vehicles.</span></div></li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="spacer"></div>
+        <a class="btn" href="/index.html#thesis"><span class="icon">↗</span> See full Thesis on Home</a>
+      </div>
+    </section>
 
-        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn primary" href="/index.html#contact"><span class="icon">✦</span> Discuss an Opportunity</a>
-          <a class="btn" href="/index.html#thesis"><span class="icon">↓</span> View our Thesis</a>
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>How We Work</h2>
+            <p>Process links here. A clear, investor-grade process from first review to execution and value creation.</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="num">01</div>
+            <h4>Screening</h4>
+            <p>Initial review of fit, business model, unit economics, governance readiness, and deal rationale.</p>
+          </div>
+          <div class="step">
+            <div class="num">02</div>
+            <h4>Underwriting</h4>
+            <p>Market analysis, financial model, downside cases, and risk mapping with mitigation plan.</p>
+          </div>
+          <div class="step">
+            <div class="num">03</div>
+            <h4>Structuring</h4>
+            <p>Term sheet alignment, shareholder protections, reporting requirements, and incentives.</p>
+          </div>
+          <div class="step">
+            <div class="num">04</div>
+            <h4>Execution</h4>
+            <p>Closing, onboarding, KPI cadence, and post-investment value creation support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (with form) -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Contact</h2>
+            <p>Contact links here. Share an opportunity or mandate — we respond quickly if it fits our investment scope.</p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Send details</div>
+
+              <form id="dealForm">
+                <div class="formRow">
+                  <input name="name" placeholder="Your name" autocomplete="name" required />
+                  <input name="email" type="email" placeholder="Email" autocomplete="email" required />
+                </div>
+
+                <div class="formRow">
+                  <select name="type" required>
+                    <option value="" disabled selected>Opportunity type</option>
+                    <option>Equity acquisition (majority)</option>
+                    <option>Equity acquisition (minority)</option>
+                    <option>Growth investment</option>
+                    <option>Co-investment</option>
+                    <option>Mandate / Advisory (investment only)</option>
+                  </select>
+                  <input name="sector" placeholder="Sector (e.g., sports data, media, wellness)" />
+                </div>
+
+                <textarea name="message" placeholder="Company / asset summary, traction, financial highlights, and what you are seeking." required></textarea>
+
+                <button class="btn primary" type="submit">
+                  <span class="icon">✉</span> Send
+                </button>
+
+                <div class="fineprint">
+                  By submitting, you confirm you are authorized to share the information. We treat communications confidentially.
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelInner">
+              <div class="miniTitle">Direct</div>
+              <p class="muted" style="margin:0 0 12px; line-height:1.7;">
+                Prefer email? Use the contact below and attach a short teaser (PDF) or executive summary.
+              </p>
+
+              <div class="panel" style="background: rgba(255,255,255,.04); border-color: var(--stroke2); box-shadow:none;">
+                <div class="panelInner">
+                  <h3 style="margin:0 0 10px;">Legacy Sport Solutions PCC Limited</h3>
+                  <p style="margin:0 0 10px;">
+                    <b>Email:</b> <span class="muted">info@legacysportsolutions.com</span><br/>
+                    <b>Scope:</b> <span class="muted">Investment & Equity Acquisitions</span><br/>
+                    <b>Notes:</b> <span class="muted">No player/coach representation</span>
+                  </p>
+                  <a class="btn" href="mailto:info@legacysportsolutions.com?subject=Legacy%20Sport%20Solutions%20PCC%20Limited%20-%20Investment%20Opportunity">
+                    <span class="icon">↗</span> Email us
+                  </a>
+                </div>
+              </div>
+
+              <div class="spacer"></div>
+              <p class="fineprint" style="margin:0;">
+                Tip: Add a “Data Room link” and “Last 12 months P&L / KPIs” to speed up review.
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -533,9 +604,9 @@
       <div class="footRow">
         <div>© <span id="year"></span> Legacy Sport Solutions PCC Limited. All rights reserved.</div>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="muted" href="/index.html#top">Home</a>
+          <a class="muted" href="#top">Top</a>
           <span class="muted">•</span>
-          <a class="muted" href="/index.html#contact">Contact</a>
+          <a class="muted" href="/index.html#top">Home</a>
         </div>
       </div>
     </div>
@@ -553,9 +624,35 @@
         mobileMenu.classList.toggle("open");
       });
     }
-    // Close mobile menu on click
     mobileMenu?.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", () => mobileMenu.classList.remove("open"));
+    });
+
+    // Mailto form handler (same as index)
+    const form = document.getElementById("dealForm");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      const data = new FormData(form);
+
+      const name = encodeURIComponent(data.get("name") || "");
+      const email = encodeURIComponent(data.get("email") || "");
+      const type = encodeURIComponent(data.get("type") || "");
+      const sector = encodeURIComponent(data.get("sector") || "");
+      const message = encodeURIComponent(data.get("message") || "");
+
+      const subject = `Legacy Sport Solutions PCC Limited - ${decodeURIComponent(type)} - ${decodeURIComponent(sector)}`.trim();
+      const body =
+`Name: ${decodeURIComponent(name)}
+Email: ${decodeURIComponent(email)}
+Type: ${decodeURIComponent(type)}
+Sector: ${decodeURIComponent(sector)}
+
+Message:
+${decodeURIComponent(message)}`;
+
+      const to = "info@legacysportsolutions.com";
+      const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
     });
   </script>
 
