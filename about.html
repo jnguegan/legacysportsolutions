@@ -43,15 +43,24 @@
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body{
-      margin: 0;
-      font-family: var(--font);
-      color: var(--text);
-      background: radial-gradient(1200px 600px at 15% 10%, rgba(118,183,255,.18), transparent 60%),
-                  radial-gradient(900px 500px at 90% 20%, rgba(156,255,213,.12), transparent 55%),
-                  radial-gradient(1000px 700px at 70% 95%, rgba(118,183,255,.10), transparent 55%),
-                  var(--bg);
-      overflow-x: hidden;
-    }
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+
+  background-image:
+    linear-gradient(rgba(7,11,20,0.90), rgba(7,11,20,0.90)),
+    radial-gradient(1200px 600px at 15% 10%, rgba(118,183,255,.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, rgba(156,255,213,.12), transparent 55%),
+    radial-gradient(1000px 700px at 70% 95%, rgba(118,183,255,.10), transparent 55%),
+    url("/assets/images/legacy-sport-solutions-about-football-investment-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  overflow-x: hidden;
+}
 
     a{ color: inherit; text-decoration: none; }
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
